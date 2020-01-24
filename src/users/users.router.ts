@@ -1,4 +1,4 @@
-import { Router } from '../common/router'
+import { Router } from '../../common/router'
 import * as restify from 'restify'
 import { User } from './users.model'
 
@@ -22,7 +22,7 @@ class UsersRouter extends Router {
                 return next()
             })
         })
-        
+
     }
 }
 
