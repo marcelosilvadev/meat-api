@@ -4,7 +4,8 @@
   "description": "Api de Restaurantes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.ts"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,12 @@
     "url": "https://github.com/marcelosilvadev/meat-api/issues"
   },
   "homepage": "https://github.com/marcelosilvadev/meat-api#readme",
-  "dependencies": {    
+  "dependencies": {
+    "mongoose": "4.13.9",
     "restify": "6.3.4"
   },
   "devDependencies": {
+    "@types/mongoose": "^4.7.32",
     "@types/restify": "5.0.6"
   }
 }

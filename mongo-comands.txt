@@ -1,0 +1,37 @@
+Para acessar um banco utilizamos e caso não tenha nada com esse nome,
+é criado altomaticamente
+use comics-universe
+
+Para mostrar o banco conectado utiliza-se
+db
+
+O mongoDB aceita comando JS, podendo atribuir um ojeto sa seguinte forma
+var peter = {name: "Peter Parker", email: "peter@marvel.com"}
+db.heroes.insert(peter)
+
+E podendo procurar por todos os resultados utilizando o comando 
+db.heroes.find()
+
+Para busca de objetos via id
+db.heroes.find({_id:ObjectId("5e2b6d6b5c23a08a05c59a1f")})
+
+Busca parcial por objeto
+db.heroes.find({name:"diana"})
+
+Busca de vizualização do primeiro disponivel
+db.heroes.findOne()
+
+Para atualizar um objeto inteiro
+var peter = db.heroes.findOne()
+peter.name = 'Peter Benjamin Parker'
+peter.age = 15
+db.heroes.update({_id: peter._id}, peter)
+
+E para um update parcial
+db.heroes.update({_id: peter._id}, {"$set": {name: "Peter"}})
+
+Para deletar um objeto
+db.heroes.remove({name: "Peter"})
+
+
+
